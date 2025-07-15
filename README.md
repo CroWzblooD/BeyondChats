@@ -1,90 +1,67 @@
 # Reddit User Persona Analyzer
 
+[![GitHub Repo](https://img.shields.io/badge/GitHub-BeyondChats-blue?logo=github)](https://github.com/CroWzblooD/BeyondChats.git)
+
 > **Assignment for BeyondChats AI/LLM Engineer Intern**
 
-Congratulations! You have been shortlisted for the assignment round for the position of AI/LLM Engineer Intern at BeyondChats. This repository contains my solution to the 48-hour assignment, which demonstrates my problem-solving and coding skills for this role.
+---
+
+## 🌟 Quick Start (For Everyone)
+
+**GitHub Repo:** [https://github.com/CroWzblooD/BeyondChats.git](https://github.com/CroWzblooD/BeyondChats.git)
+
+**No experience needed! Just follow these steps:**
 
 ---
 
-## 📋 Assignment Overview
-
-**Task:**
-- Take a Reddit user’s profile URL as input (e.g., `https://www.reddit.com/user/kojied/`)
-- Scrape the user's posts and comments
-- Build a comprehensive User Persona based on their Reddit activity
-- Output the persona in a text file **with citations** for each characteristic
-- (Bonus) Generate a visually rich, single-page PDF persona document
-
-**Technologies Used:**
-- Python 3.8+
-- [PRAW](https://praw.readthedocs.io/) (Reddit API)
-- [Google Gemini LLM](https://aistudio.google.com/app/apikey) (for persona analysis)
-- [ReportLab](https://www.reportlab.com/dev/docs/) (for PDF generation)
-- dotenv, requests, PIL, and standard Python libraries
-
----
-
-## 🚀 Features
-- **Reddit Scraping:** Fetches all public posts and comments for any Reddit user
-- **AI Persona Analysis:** Uses Gemini LLM to analyze user behavior, motivations, and personality
-- **Citations:** Each persona trait is linked to specific posts/comments as evidence
-- **Text & PDF Output:** Generates both a detailed text file and a beautiful, single-page PDF persona
-- **Modern, Professional Layout:** PDF matches industry-standard persona templates
-
----
-
-## 🛠️ Setup Instructions
-
-### 1. Clone the Repository
+## 1. Clone the Project
 ```bash
-# Replace <your-repo-url> with your fork or this repo's URL
-git clone <your-repo-url>
+git clone https://github.com/CroWzblooD/BeyondChats.git
 cd BeyondChats
 ```
 
-### 2. Install Dependencies
+---
+
+## 2. Install Python Requirements
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Configure Environment Variables
-- Copy `.env.example` to `.env`:
+---
+
+## 3. Set Up Your .env File
+
+- Copy the template:
   ```bash
   cp .env.example .env
   ```
-- Edit `.env` and add your API keys:
-  - `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` (see below)
-  - `GEMINI_API_KEY` (see below)
+- Open `.env` in any text editor and fill in your API keys:
 
-#### Reddit API Credentials
-1. Go to [Reddit Apps](https://www.reddit.com/prefs/apps)
-2. Click **Create App** (type: Script)
-3. Set Redirect URI to `http://localhost:8080`
-4. Copy your **Client ID** and **Client Secret** into `.env`
+### Example .env file
+```env
+REDDIT_CLIENT_ID=your_reddit_client_id_here
+REDDIT_CLIENT_SECRET=your_reddit_client_secret_here
+GEMINI_API_KEY=your_gemini_api_key_here
+```
 
-#### Gemini API Key
-1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey)
-2. Create a new Gemini API key
-3. Add it to `.env` as `GEMINI_API_KEY`
+- **Where do I get these?**
+  - [How to get Reddit API keys?](https://www.reddit.com/prefs/apps)
+  - [How to get Gemini API key?](https://aistudio.google.com/app/apikey)
 
 ---
 
-## ▶️ Usage
-
-### Run the Analyzer
+## 4. Run the Analyzer!
 ```bash
 python reddit_persona_analyzer.py
 ```
 
-### Follow the Prompts
-- Enter a Reddit user profile URL (e.g., `https://www.reddit.com/user/kojied/`)
-- The script will:
-  1. Fetch posts and comments
-  2. Analyze the user with Gemini LLM
-  3. Generate persona files (text and PDF)
-- Output files are saved in `data/sample_outputs/`
+- When asked, paste a Reddit user profile URL (like `https://www.reddit.com/user/kojied/`)
+- Wait a minute for the magic to happen!
+- Find your results in `data/sample_outputs/` (both text and PDF persona files)
 
-### Example Output
+---
+
+## 5. Example Output
 - `kojied_persona.txt` (text persona with citations)
 - `kojied_persona_<timestamp>.pdf` (single-page PDF persona)
 
@@ -110,20 +87,24 @@ BeyondChats/
 
 ---
 
-## 📝 Sample Outputs
-- Example persona files for:
-  - `kojied`
-  - `Hungry-Move-6603`
-- See `data/sample_outputs/` for reference
+## 📝 .env Template (Copy & Fill)
+```env
+REDDIT_CLIENT_ID=your_reddit_client_id_here
+REDDIT_CLIENT_SECRET=your_reddit_client_secret_here
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+- Get your Reddit keys from: https://www.reddit.com/prefs/apps
+- Get your Gemini key from: https://aistudio.google.com/app/apikey
 
 ---
 
-## 🧑‍💻 Troubleshooting
-- **Missing API Keys:** Check your `.env` file
-- **Reddit API Errors:** Ensure credentials are correct and app type is "Script"
-- **Gemini API Errors:** Check your API key and quota
-- **User Not Found:** The Reddit user may not exist or have a private/deleted account
-- **Rate Limiting:** The script is rate-limited, but Reddit may still impose limits
+## 🧑‍💻 Troubleshooting (If you get stuck)
+- **Missing API Keys:** Double-check your `.env` file
+- **Reddit API Errors:** Make sure your Reddit app is type "Script"
+- **Gemini API Errors:** Check your Gemini API key and quota
+- **User Not Found:** The Reddit user may not exist or is private
+- **Still stuck?** Delete your `.env` and try again from the template!
 
 ---
 
