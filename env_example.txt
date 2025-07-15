@@ -1,0 +1,12 @@
+# Reddit API Configuration
+REDDIT_CLIENT_ID=_nsJsr3iYDI3mw4qzqZmtA
+REDDIT_CLIENT_SECRET=gBb2qHU1Ytbdc-CM9Xf2bWOdo-dkPg
+REDDIT_USER_AGENT=RedditPersonaAnalyzer/1.0
+
+# Gemini API Configuration
+GEMINI_API_KEY=AIzaSyCo8rxD6BkINc2cBMLoqzdMregyCfwBnK4
+
+# Analysis Configuration
+MAX_POSTS_TO_ANALYZE=50
+MAX_COMMENTS_TO_ANALYZE=100
+OUTPUT_DIR=data/sample_outputs 
